@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Stopwatch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-stopwatch"></i>Stopwatch</h1>
+            <p>Track time with accuracy and record lap intervals. Perfect for sports, experiments, or personal use.</p>
+        </div>
+        
+        <div class="stopwatch-display">
+            <div class="time-display">
+                <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds" class="milliseconds">00</span>
+            </div>
+            <div class="status-indicator" id="status-indicator">Stopped</div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-start" id="startBtn">
+                <i class="fas fa-play"></i> Start
+            </button>
+            <button class="btn btn-pause" id="pauseBtn" disabled>
+                <i class="fas fa-pause"></i> Pause
+            </button>
+            <button class="btn btn-lap" id="lapBtn" disabled>
+                <i class="fas fa-flag"></i> Lap
+            </button>
+            <button class="btn btn-reset" id="resetBtn">
+                <i class="fas fa-redo"></i> Reset
+            </button>
+        </div>
+        
+        <div class="lap-section">
+            <div class="lap-header">
+                <h2><i class="fas fa-list-ol"></i> Lap Times</h2>
+                <div class="lap-actions">
+                    <button class="lap-btn" id="clearLapsBtn">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                    <button class="lap-btn" id="saveLapsBtn">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                </div>
+            </div>
+            
+            <div class="lap-list" id="lapList">
+                <div class="empty-laps">No lap times recorded yet. Click "Lap" to record your first lap time.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
